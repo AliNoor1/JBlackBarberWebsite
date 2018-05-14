@@ -12,9 +12,10 @@ A website where customers can make appointments and see what kind of services ar
 
 ```
 /JBlackBarberWebsite
-  |-- CSS
-  |-- HTML
-  |-- Scripts
+  |-- Home-Page
+  |-- Gallery-Page
+  |-- Appointment-Page
+  |-- Admin-Page
   |-- Images
   |-- SQL
   index.php
