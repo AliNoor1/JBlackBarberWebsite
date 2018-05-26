@@ -8,13 +8,26 @@ body {
     box-sizing: border-box;
 }
 
+/*TOP DIV*/
 .homeImage {
 	width: 100%;
 	height: 600px;
-	background-image: url("http://www.kinyu-z.net/data/wallpapers/235/1528407.jpg");
+	background-image: url("../Images/homepage1.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	overflow: hidden;
+}
+
+.homeImage img{
+	border-radius: 50%; 
+	height: 100px; 
+	width: 100px;
+	margin: 20px;
+	position: absolute;
+}
+
+.homeImage img:hover{
+	cursor: pointer;
 }
 
 .titles{
@@ -34,6 +47,7 @@ body {
 	color: white;
 	text-align: center;
 	text-shadow: 2px 1px black;
+	letter-spacing: 6px;
 }
 
 .homeImage h2{
@@ -54,25 +68,27 @@ body {
 	text-shadow: 2px 1px black;
 }
 
-.navbar-container{
-	height: 35vh;
+/*BOOKING DIV*/
+.bookingContainer{
+	height: 300px;
 	width: 100%;
 	margin: 0;
-	background: rgba(0, 0, 0, 1);
+	background: white;
 	text-align: center;
 	overflow: hidden;
 	/*background: linear-gradient(-45deg, #000000, #282828, #000000, #282828);*/
 }
 
 .aptmtButton{
-	background: grey;
+	background: #a9976a;
+	/*#a9976a 878787*/
 	border-radius: 8px;
 	margin: auto;
 	width: 400px;
 	height: 70px;
 	margin-top: 100px;
 	padding: 20px;
-	border-bottom: 2px solid white;
+	border-bottom: 2px solid #333332;
 	-webkit-transition: 0.5s; 
     transition: 0.5s;
 }
@@ -86,25 +102,139 @@ body {
 }
 
 .aptmtButton:hover{
-	background: #494949;
+	background: #726648;
+	cursor: pointer;
 }
 
-.locationContainer{
-	height: 40vh;
+/*SERVICES DIV*/
+.servicesContainer{
+	height: 600px;
 	width: 100%;
 	margin: 0;
-	background: rgba(0, 0, 0, 0.8);
+	background: #333332;
 	overflow: hidden;
 	text-align: center;
 }
 
-.locationContainer h1{
+.servicesContainer h1{
 	color: white;
 	font-family: 'Aref Ruqaa', serif;
 	font-size: 40px;
 }
 
+.servicesContainer h2{
+	color: white;
+	font-family: 'Aref Ruqaa', serif;
+	font-size: 30px;
+}
 
+.serviceTable{
+	display: flex;
+	width: 80%;
+	height: 300px;
+	margin: auto;
+}
+
+.serviceTable ul li{
+	list-style-type: square;
+	font-family: 'Josefin Sans', serif;
+	font-weight: 100;
+	color: #878787;
+	text-align: left;
+}
+
+.element1{
+	border-top: 2px solid #a9976a;
+	margin: 8px;
+	border-radius: 3px;
+}
+
+/*LOCATION DIV*/
+.locationContainer{
+	height: 700px;
+	width: 100%;
+	margin: 0;
+	background: #a1a5ad;
+	overflow: hidden;
+	text-align: center;
+}
+
+.locationContainer h2{
+	color: black;
+	font-family: 'Aref Ruqaa', serif;
+	font-size: 40px;
+}
+.locationContainer h3{
+	color: white;
+	font-family: 'Josefin Sans', serif;
+	font-weight: 500;
+	font-size: 20px;
+}
+
+/*MAP AND ADDRESS DIV*/
+
+#map{
+	margin: auto;
+    height: 400px;  
+	width:40%;
+	border: 2px solid white;
+	border-radius: 3px;
+}
+
+.locationRow{
+	display: flex;
+	margin-top: 100px;
+}
+
+.address{
+	border-top: 2px solid #333332;
+	border-bottom: 2px solid #333332;
+	border-radius: 4px;
+	width: 20%;
+	margin: auto;
+	height: auto;
+	padding: 20px;
+}
+
+/*HOURS DIV*/
+
+.hours{
+	border-top: 2px solid #333332;
+	border-bottom: 2px solid #333332;
+	border-radius: 3px;
+	width: 100%;
+	margin: auto;
+	height: auto;
+	padding: 20px;
+}
+
+.tableHours{
+	margin: auto;
+}
+
+.tableHours tr{
+	font-size: 16px;
+	color: white;
+	font-family: 'Josefin Sans', serif;
+}
+
+.outerHoursContainer{
+	width: 20%;
+	margin: auto;
+}
+
+.outerHoursContainer h1{
+	color: black;
+	font-family: 'Aref Ruqaa', serif;
+	font-size: 40px;
+	font-style: italic;
+}
+
+/*GALLERY CONTAINER*/
+.galleryContainer{
+	width: 100%;
+	height: 800px;
+}
 
 
 

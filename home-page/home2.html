@@ -2,8 +2,9 @@
 <html>
 	<head>
 		<link href="home2.css" type="text/css" rel="stylesheet">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 		<link href="https://fonts.googleapis.com/css?family=Aref+Ruqaa|Josefin+Sans" rel="stylesheet">
+		
     </head>
 
 	<title>J. Black Barber</title>
@@ -11,6 +12,8 @@
 	<body>
 	
 		<div class="homeImage">
+		
+		<img src="../Images/logo.jpg"></img>
 		
 			<div class="titles">
 				<h1>J. Black Barber Shop</h1>
@@ -20,7 +23,7 @@
 			
 		</div>
 	
-		<div class="navbar-container">
+		<div class="bookingContainer">
 			
 			<div class="aptmtButton">
 				<a href="#">Book an Appointment</a>
@@ -28,10 +31,176 @@
 			
 		</div>
 		
-		<div class="locationContainer">
+		<div class="servicesContainer">
 			
 			<h1>Services offered</h1>
 			
+			<div class="serviceTable">
+			
+				<div class="element1">
+					
+					<h2>J. Black Haircut</h2>
+					
+					<ul>
+					  <li>Shampoo</li>
+					  <li>A Precision Haircut</li>
+					  <li>Neck Shave - Line Up</li>
+					  <li>Style</li>
+					  <li>A Steamed Towel</li>
+					  <li>Beard Trim Followed By Razor</li>
+					</ul>
+					
+				</div>
+				
+				<div class="element1">
+				
+					<h2>J. Black Haircut</h2>
+					
+					<ul>
+					  <li>Shampoo</li>
+					  <li>A Precision Haircut</li>
+					  <li>Neck Shave - Line Up</li>
+					  <li>Style</li>
+					  <li>A Steamed Towel</li>
+					  <li>Beard Trim Followed By Razor</li>
+					</ul>
+					
+				</div>
+				
+				<div class="element1">
+				
+					<h2>J. Black Haircut</h2>
+					
+					<ul>
+					  <li>Shampoo</li>
+					  <li>A Precision Haircut</li>
+					  <li>Neck Shave - Line Up</li>
+					  <li>Style</li>
+					  <li>A Steamed Towel</li>
+					  <li>Beard Trim Followed By Razor</li>
+					</ul>
+				
+				</div>
+				
+				<div class="element1">
+				
+					<h2>J. Black Haircut</h2>
+					
+					<ul>
+					  <li>Shampoo</li>
+					  <li>A Precision Haircut</li>
+					  <li>Neck Shave - Line Up</li>
+					  <li>Style</li>
+					  <li>A Steamed Towel</li>
+					  <li>Beard Trim Followed By Razor</li>
+					</ul>
+				
+				</div>
+				
+				<div class="element1">
+				
+					<h2>J. Black Haircut</h2>
+					
+					<ul>
+					  <li>Shampoo</li>
+					  <li>A Precision Haircut</li>
+					  <li>Neck Shave - Line Up</li>
+					  <li>Style</li>
+					  <li>A Steamed Towel</li>
+					  <li>Beard Trim Followed By Razor</li>
+					</ul>
+				
+				</div>
+			
+			</div>
+			
+			
+		</div>
+		
+		<div class="locationContainer">
+				
+			<div class="locationRow">
+			
+				<div id="map">
+					
+					<script>
+				// Initialize and add the map
+				function initMap() {
+				  // The location of JBlack
+				  var jblack = {lat: 40.024251, lng: -105.238033};
+				  // The map, centered at JBlack
+				  var map = new google.maps.Map(
+					  document.getElementById('map'), {zoom: 15, center: jblack});
+				  // The marker, positioned at JBlack
+				  var marker = new google.maps.Marker({position: jblack, map: map});
+				}
+					</script>
+					
+					<script async defer
+					src="https://maps.googleapis.com/maps/api/js?key=AIzaSyALf4DnwVzkEP1i3T85WOTGkhwVK9ByX1U&callback=initMap">
+					</script>
+				
+				</div>
+				
+				<div class="address">
+					
+					<h2>J. Black Barber Shop</h2>
+					
+					<h3>2550 49th Street ST 1, Boulder, CO 80301</h3>
+					
+					<h3><i class="fas fa-phone" style="color: white;"></i> (720) 732-8850</h3>
+				
+				</div>
+				
+				<div class="outerHoursContainer">
+					
+					<h1>Hours</h1>
+					
+					<div class="hours">
+					
+						<table class="tableHours">
+						
+							<tr>
+								<td>Monday</td>
+								<td>11 A.M. - 7 P.M.</td>
+							</tr>
+							<tr>
+								<td>Tuesday</td>
+								<td>11 A.M. - 5 P.M.</td>
+							</tr>
+							<tr>
+								<td>Wednesday</td>
+								<td>11 A.M. - 7 P.M.</td>
+							</tr>
+							<tr>
+								<td>Thursday</td>
+								<td>11 A.M. - 7 P.M.</td>
+							</tr>
+							<tr>
+								<td>Friday</td>
+								<td>11 A.M. - 7 P.M.</td>
+							</tr>
+							<tr>
+								<td>Saturday</td>
+								<td>11 A.M. - 7 P.M.</td>
+							</tr>
+							<tr>
+								<td>Sunday</td>
+								<td>CLOSED</td>
+							</tr>
+						
+						</table>
+						
+					</div>
+				
+				</div>
+				
+			</div>
+		
+		</div>
+		
+		<div class="galleryContainer">
+		
 		</div>
 	
 	</body>
