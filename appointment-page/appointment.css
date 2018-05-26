@@ -1,0 +1,46 @@
+body {
+	margin: 0;
+	font-family: 'Gothic A1', sans-serif;
+	font-style: normal;
+	letter-spacing: 2px;
+	background: black;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+.mainContainer{
+	display: flex;
+}
+
+h1{
+	color: white;
+	font-size: 40px;
+	text-align: center;
+	margin-top: 10%;
+	
+}
+
+.cal{
+	width: 80%;
+}
+
+.calendar{
+	width: 50%;
+	height: 40vh;
+	background: grey;
+	margin-left: 25%;
+	margin-right: auto;
+	margin-top: 1%;
+	margin-bottom: auto;
+	border-radius: 5px;
+	position: absolute;
+	border-top: 3px solid gold;
+}
+
+.navBar{
+	width: 20%;
+	background: grey;
+	display: block;
+}
