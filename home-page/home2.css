@@ -119,7 +119,8 @@ body {
 .servicesContainer h1{
 	color: white;
 	font-family: 'Aref Ruqaa', serif;
-	font-size: 40px;
+	font-size: 60px;
+	font-style: italic;
 }
 
 .servicesContainer h2{
@@ -234,8 +235,72 @@ body {
 .galleryContainer{
 	width: 100%;
 	height: 800px;
+	text-align: center;
+	background: #e5e5e5;
+	overflow: hidden;
 }
 
+.galleryContainer h1{
+	color: black;
+	font-family: 'Aref Ruqaa', serif;
+	font-size: 60px;
+	font-style: italic;
+}
 
+.galleryContainer h2{
+	color: black;
+	font-family: 'Josefin Sans', serif;
+	font-size: 24px;
+	font-weight: 200;
+}
+
+.galleryContainer a{
+	color: #a9976a;
+	font-family: 'Josefin Sans', serif;
+	font-size: 24px;
+	font-weight: 200;
+	text-decoration: none;
+	-webkit-transition: 0.5s; 
+    transition: 0.5s;
+}
+
+.galleryContainer a:hover{
+	color:  #726648;
+}
+
+.galleryPreview{
+	display: flex;
+}
+
+.galleryPreview img{
+	width: 500px;
+	height: 350px;
+	margin: auto;
+	margin-top: 50px;
+	box-shadow: 4px 5px 20px 0px rgba(0,0,0,0.25);
+}
+
+.footer{
+	width: 100%;
+	height: 100px;
+	background: rgba(0,0,0,0.9);
+	text-align: center;
+}
+
+.footer a{
+	color: white;
+	font-size: 50px;
+}
+
+.footer i{
+	margin-top: 25px;
+	padding-left: 40px;
+	-webkit-transition: 0.5s; /* For Safari 3.1 to 6.0 */
+    transition: 0.5s;
+}
+
+.footer i:hover{
+	color: #a9976a;
+}
 
 
