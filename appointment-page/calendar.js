@@ -1,4 +1,6 @@
 //Calendar Algorithm
+//Generates Calendar dates infinitly
+//Christian Simons - 06/02/2018
 
 //Global Vars
 var originMonth = 12;
@@ -392,31 +394,12 @@ function getMonth(pMonth, maxDays, pDay)
 	//
 	//next functions to code and call: setNextMonth(currentMonth, ?), setPrevMonth(currentMonth, ?)
 	//getMonth always called first, then sends data to setNextMonth(), based on above patterns should be able to interpret it.
-	
-	//to use the onclick change, we need to concat strings to make "setNextMonth(whatevermonth, whateverfirstday);"
-	var stringSetNextCall = "setNextMonth(";
-	var stringSetPrevCall = "setPrevMonth(";
-	
-	var sMonth = nMonth;
-	var sFirstDay = firstDay;
-	
-	//var stringSetFirstParameter = sMonth.toString();
-	//var stringSetSecondParameter = sFirstDay.toString();
-	
-	var stringSetFirstParameter = "" + sMonth;
-	var stringSetSecondParameter = "" + sFirstDay;
-	
-	var stringSetNextConcat = stringSetNextCall + stringSetFirstParameter + "," + stringSetSecondParameter + ");";
-	var stringSetPrevConcat = stringSetPrevCall + stringSetFirstParameter + "," + stringSetSecondParameter + ");";
-
-	
-	//document.getElementById("nxt").onclick = stringSetNextConcat;
+		
 	document.getElementById("nxt").onclick = function() {setNextMonth(pMonth, firstDay);};
-	//setNextMonth(pMonth, firstDay);
+	
+	if((originMonth != pMonth) || (originMonth == pMonth && originYear != currentYear))
 	{
-		//document.getElementById("pre").onclick = stringSetNextConcat;
 		document.getElementById("pre").onclick = function() {setPrevMonth(pMonth, firstDay);};
-		//setPrevMonth(pMonth, firstDay);
 	}
 }
 
@@ -428,12 +411,8 @@ function setNextMonth(currentMonth, currentFirstDay)
 	//31 -> x: +3 Days
 	//28 -> x: +0 Days
 	//29 -> x: +1 Days
-	
-	console.log("setNextMonth() called, currentMonth:");
-	console.log(currentMonth);
-	
+		
 	var nextMaxDays = 0;
-	//var leapYearBool = false;
 	var nextMonth = 0;
 	var nextFirstDay = 0;
 	date = new Date();
@@ -442,7 +421,6 @@ function setNextMonth(currentMonth, currentFirstDay)
 	if(currentMonth == 11)	//If next month is jan
 	{
 		nextMonth = 0;
-		//maxDays = 31;
 		currentYear++;
 		document.getElementById("year").innerHTML = currentYear.toString();
 	}
@@ -450,28 +428,22 @@ function setNextMonth(currentMonth, currentFirstDay)
 	{
 		nextMonth = currentMonth + 1;
 	}
-	
-	//MaxDays adjust (use the next month's maxDays)
+
 	if(currentMonth == 0)
-	{
-		//leapYearCheck = date.getYear();
-		
+	{	
 		if(currentYear % 4 == 0)
 		{
-			//console.log("First Leap Year Check: currentMonth == 0 and leapYearBool == true");
 			nextMaxDays = 29;
 			leapYearBool = true;
 		}
 		else
 		{
-			//console.log("First Leap Year Check: currentMonth == 0 and leapYearBool == false");
 			nextMaxDays = 28;
 			leapYearBool = false;
 		}
 	}
 	else if(currentMonth == 1 || currentMonth == 3 || currentMonth == 5 || currentMonth == 6 || currentMonth == 8 || currentMonth == 10 || currentMonth == 11)
 	{
-		//console.log("nextMaxDays set to 31");
 		nextMaxDays = 31;
 	}
 	else if(currentMonth == 2 || currentMonth == 4 || currentMonth == 7 || currentMonth == 9)
@@ -480,22 +452,18 @@ function setNextMonth(currentMonth, currentFirstDay)
 	}
 	
 	
-	//Determine next month's first day
 	if(currentMonth == 3 || currentMonth == 5 || currentMonth == 8 || currentMonth == 10)	//30 Day Months
 	{
 		if(currentFirstDay <= 4)
 		{
-			//console.log("setNext: 30 Day Month first if");
 			nextFirstDay = currentFirstDay + 2;
 		}
 		else if(currentFirstDay == 5)
 		{
-			//console.log("setNext: 30 Day Month second if");
 			nextFirstDay = 0;
 		}
 		else if(currentFirstDay == 6)
 		{
-			//console.log("setNext: 30 Day Month third if");
 			nextFirstDay = 1;
 		}
 	}
@@ -503,32 +471,25 @@ function setNextMonth(currentMonth, currentFirstDay)
 	{
 		if(currentFirstDay <= 3)
 		{
-			//console.log("setNext: 31 Day Month first if");
 			nextFirstDay = currentFirstDay + 3;
 		}
 		else if(currentFirstDay == 4)
 		{
-			//console.log("setNext: 31 Day Month second if");
 			nextFirstDay = 0;
 		}
 		else if(currentFirstDay == 5)
 		{
-			//console.log("setNext: 31 Day Month third if");
 			nextFirstDay = 1;
 		}
 		else if(currentFirstDay == 6)
 		{
-			//console.log("setNext: 31 Day Month fourth if");
 			nextFirstDay = 2;
 		}
 	}
 	else if(currentMonth == 1)
 	{
-		//console.log("setNext: nextFirstDay Logic: currentMonth == 1");
-		//console.log(leapYearBool);
 		if(leapYearBool == true)
 		{
-			//console.log("currentMonth == 1 and leapYearBool == true");
 			if(currentFirstDay < 6)
 			{
 				nextFirstDay = currentFirstDay + 1;
@@ -540,14 +501,10 @@ function setNextMonth(currentMonth, currentFirstDay)
 		}
 		else if(leapYearBool == false)
 		{	
-			//console.log("currentMonth == 1 and leapYearBool == false");
 			nextFirstDay = currentFirstDay;
 		}
 	}
-	/*console.log("Params:");
-	console.log(nextMaxDays);
-	console.log(nextFirstDay);
-	console.log("\n");*/
+
 	getMonth(nextMonth, nextMaxDays, nextFirstDay);
 
 	delete date;
@@ -563,7 +520,6 @@ function setPrevMonth(currentMonth, currentFirstDay)
 	if(currentMonth == 0)	//If next month is jan
 	{
 		prevMonth = 11;
-		//maxDays = 31;
 		currentYear--;
 		document.getElementById("year").innerHTML = currentYear.toString();
 	}
@@ -603,7 +559,7 @@ function setPrevMonth(currentMonth, currentFirstDay)
 	//31 <- x: -3 Days
 	//28 <- x: -0 Days
 	//29 <- x: -1 Days
-	if(currentMonth == 0 || currentMonth == 3 || currentMonth == 5 || currentMonth == 7 || currentMonth == 8 || currentMonth == 10) //31 <- x
+	if(currentMonth == 0 || currentMonth == 1 || currentMonth == 3 || currentMonth == 5 || currentMonth == 7 || currentMonth == 8 || currentMonth == 10) //31 <- x
 	{
 		if(currentFirstDay >= 3)
 		{
